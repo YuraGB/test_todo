@@ -1,0 +1,22 @@
+.main {
+    background: var(--body-background);
+    z-index: 1;
+    min-height: 100dvh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.root {
+    background: var(--todo-background);
+    max-width: var(--maxW-todo);
+    padding: 20px 5dvh;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.toolbar {
+    padding: 20px 10px;
+    box-shadow: var(--toolbar-shadow);
+}

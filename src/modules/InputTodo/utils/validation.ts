@@ -1,5 +1,5 @@
 const validateTodo = (todo: string): boolean => {
-  if(typeof todo !== 'string') {
+  if (typeof todo !== 'string') {
     return false
   }
 

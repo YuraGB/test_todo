@@ -1,9 +1,9 @@
-import {ReactNode} from 'react'
+import { ReactNode } from 'react'
 import { Provider } from 'react-redux'
-import {ChakraProvider} from "@chakra-ui/react"
+import { ChakraProvider } from '@chakra-ui/react'
 
-import TodoModule from "../TodoModule"
-import {setupStore} from "../../store"
+import TodoModule from '../TodoModule'
+import { setupStore } from '../../store'
 
 function App(): ReactNode {
   const store = setupStore()

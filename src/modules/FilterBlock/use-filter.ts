@@ -1,5 +1,5 @@
-import {useAppDispatch} from "../../store/hooks"
-import {changeFilter} from "../../store/reducers/filterReducer.ts"
+import { useAppDispatch } from '../../store/hooks'
+import { changeFilter } from '../../store/reducers/filter-reducer.ts'
 
 const filterOptions = ['all', 'active', 'completed'] as const
 
@@ -17,6 +17,6 @@ export const useFilter = (): TUseFilter => {
 
   return {
     filterOptions,
-    onFilterChange
+    onFilterChange,
   }
 }

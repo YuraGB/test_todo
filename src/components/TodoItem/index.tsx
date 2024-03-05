@@ -1,9 +1,9 @@
-import React, {FC, ReactNode} from "react"
-import he from "he"
-import {Flex, Grid, IconButton, GridItem, Tooltip} from "@chakra-ui/react"
-import {DeleteIcon} from "@chakra-ui/icons"
+import React, { FC } from 'react'
+import he from 'he'
+import { Flex, Grid, IconButton, GridItem, Tooltip } from '@chakra-ui/react'
+import { DeleteIcon } from '@chakra-ui/icons'
 
-import {TTodo} from "../../store/reducers/types.ts"
+import { TTodo } from '../../store/reducers/types.ts'
 import classes from './todoItem.module.css'
 
 type TodoActions = {
@@ -13,15 +13,26 @@ type TodoActions = {
 
 type TodoItemProps = TTodo & TodoActions
 
-const TodoItem: FC<TodoItemProps> = React.memo(({id, title, completed, onClick, onRemove}): ReactNode => {
-  const tooltipLabel = completed ? "Click to make as active" : "Click to make as complete"
+const TodoItem: FC<TodoItemProps> = React.memo(({
+  id,
+  title,
+  completed,
+  onClick,
+  onRemove,
+}) => {
+  const tooltipLabel =
+      completed ? 'Click to make as active' : 'Click to make as complete'
 
   return (
-    <Grid templateColumns={'minmax(0, 1fr) 48px'} gap={6} className={classes.root}>
-      <GridItem border={"1px 10px 5px black"}>
+    <Grid
+      templateColumns={'minmax(0, 1fr) 48px'}
+      gap={6}
+      className={classes.root}>
+      <GridItem border={'1px 10px 5px black'}>
         <Tooltip label={tooltipLabel} >
           <p
-            className={`${classes.title} ${completed ? classes.completed : classes.active}`}
+            className={`${classes.title}
+             ${completed ? classes.completed : classes.active}`}
             onClick={() => onClick(id)}
           >
             {he.unescape(title)}
